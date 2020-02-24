@@ -1,6 +1,8 @@
 -o
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\exe\\frcUserProgram\\debug\\frcUserProgram"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\3bg5a77l7vd4edmrxq5jco6ri\\Robot.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\9kdka5ek1moicggw7d0sn8tqw\\Pneumatics.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\cm2y4onjc0iucj2g162qu5z2g\\ColorSense.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\nld3y9x25ul3l8bbh4ne38w\\chassis.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\debug\\frcUserProgramCpp\\nvdekldfh6l17vmh1p6benue\\OurJoystick.o"
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\e6b7a50bb2e7bbef428f312d2fbae2ff\\wpilibc-cpp-2020.2.2-linuxathenadebug\\linux\\athena\\shared\\libwpilibcd.so
@@ -36,6 +38,9 @@ C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videod.so.3.4
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videoiod.so.3.4
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\8b8270a5b35cf1e4d13e1762d0743031\\opencv-cpp-3.4.7-2-linuxathenadebug\\linux\\athena\\shared\\libopencv_videostabd.so.3.4
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\55c16f7ca155fa5952bef0ab286566de\\ColorSensorV3-cpp-1.0.1-linuxathenastaticdebug\\linux\\athena\\static\\libColorSensorV3.a
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\fa9ca222280224e2ebf33dcab595f007\\SparkMax-cpp-1.5.1-linuxathenastaticdebug\\linux\\athena\\static\\libSparkMax.a
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\7d277d0a439c68b82806d2a62a1ecc81\\SparkMax-driver-1.5.1-linuxathenastaticdebug\\linux\\athena\\static\\libSparkMaxDriver.a
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\05f8dfd0be75eadc9756894990bb8710\\wpilibNewCommands-cpp-2020.2.2-linuxathenadebug\\linux\\athena\\shared\\libwpilibNewCommandsd.so
 -rdynamic
 -pthread

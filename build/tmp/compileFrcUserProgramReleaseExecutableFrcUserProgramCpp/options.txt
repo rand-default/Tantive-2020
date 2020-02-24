@@ -38,6 +38,12 @@ C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\b97702da5f4ce7738418
 -I
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\eed3931469ba7efc2e953f8f3443a673\\opencv-cpp-3.4.7-2-headers
 -I
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\ef181eb264b8818487fd0269936cc989\\ColorSensorV3-cpp-1.0.1-headers
+-I
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\15293868dd71bcc1355849601a4f3400\\SparkMax-cpp-1.5.1-headers
+-I
+C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\8174659635098cac2f272ce2ad93eaa2\\SparkMax-driver-1.5.1-headers
+-I
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\f2b80ed8797820c9fb76221f6084ac87\\wpilibNewCommands-cpp-2020.2.2-headers
 -isystem
 c:\\users\\public\\wpilib\\2020\\roborio\\bin\\..\\arm-frc2020-linux-gnueabi\\usr\\lib\\gcc\\arm-frc2020-linux-gnueabi\\7.3.0\\include

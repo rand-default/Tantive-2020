@@ -9,7 +9,7 @@ double OurJoystick::xisis()
 
 double OurJoystick::yisis()
 {
-    return -stick.GetRawAxis(1);
+    return stick.GetRawAxis(1);
 }
 
 double OurJoystick::twistyy()

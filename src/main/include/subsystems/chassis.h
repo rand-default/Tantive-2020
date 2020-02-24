@@ -2,7 +2,9 @@
 
 #include <iostream>
 #include <frc/Spark.h>
-#include <sparkmax/rev/CANSparkMax.h>
+// #include <sparkmax/rev/CANSparkMax.h>
+#include <rev/CANSparkMax.h>
+#include <frc/PWMVictorSPX.h>
 
 class Chassis
 {
@@ -21,13 +23,19 @@ public:
   void LRSpeed(double LSpeed, double RSpeed);
 
 private:
-  // Create Spark Objects
+  // Create Spark Objects(2020 robot)
   frc::Spark LeftMaster{9};
   frc::Spark LeftSlave{8};
   frc::Spark RightMaster{6};
   frc::Spark RightSlave{7};
-  // rev::SparkMax Brushless{5};
 
-  rev::CANSparkMax Brushless{1};
-  
+  // Create Vex Objects(2019 robot)
+  frc::PWMVictorSPX LeftMaster{3};
+  frc::PWMVictorSPX LeftSlave{2};
+  frc::PWMVictorSPX RightMaster{1};
+  frc::PWMVictorSPX RightSlave{0};
+
+  // THE SACRED COODE
+  rev::CANSparkMax Brushless{1, rev::CANSparkMax::MotorType::kBrushless};
+  rev::CANEncoder encoder = Brushless.GetEncoder(rev::CANEncoder::EncoderType::kHallSensor, 4096);
 };
