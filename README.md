@@ -2,6 +2,6 @@
  FRC Infinite Recharge 2020
 
 # Contributors
-- Joshua Winters-Bronw
+- Joshua Winters-Brown
 - Adam Ismaili-Alaoui
 - Rand Faber
