@@ -4,9 +4,12 @@
 #include <frc/TimedRobot.h>
 #include "subsystems/chassis.h"
 #include "subsystems/OurJoystick.h"
+#include "DriverStation.h"
+#include "IntakeTransfer.h"
+#include "Climber.h"
 #include "ColorSense.h"
 
-class Robot : public frc::TimedRobot {
+class Robot : public frc::TimedRobot {    
     static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
     
     rev::ColorSensorV3 m_colorSensor{i2cPort};
@@ -31,5 +34,7 @@ class Robot : public frc::TimedRobot {
  private:
     Chassis chassis;
     OurJoystick joystick;
-    
+    DriverStation station;
+    IntakeTransfer intake;
+    Climber climb;
 };

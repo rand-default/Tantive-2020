@@ -1,5 +1,5 @@
 #include "subsystems/chassis.h"
-#include <frc/smartdashboard/smartdashboard.h>
+#include <frc/smartdashboard/SmartDashboard.h>
 
 Chassis::Chassis()
 {

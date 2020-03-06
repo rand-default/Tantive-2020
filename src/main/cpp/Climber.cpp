@@ -5,12 +5,21 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#pragma once
-#include <frc/util/color.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorSensorV3.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorMatch.h>
+#include "Climber.h"
+#include <frc/smartdashboard/SmartDashboard.h>
 
-class ColorSense {
- public:
-  ColorSense();
-};
+Climber::Climber()
+{
+    printf("Creating Climber");
+}
+
+Climber::~Climber()
+{
+    printf("Deconstructing Climber");
+}
+
+void Climber::up(double speed)
+{
+    ClimbMaster.Set(speed);
+    ClimbSlave.Set(speed);
+}

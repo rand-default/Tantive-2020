@@ -6,12 +6,5 @@
 /*----------------------------------------------------------------------------*/
 
 #include "ColorSense.h"
-#include "frc/smartdashboard/SmartDashboard.h"
-#include <rev/ColorSensorV3.h> 
-#include <rev/ColorMatch.h>
 
-
-ColorSense::ColorSense() 
-{
-    
-}
+ColorSense::ColorSense() {}

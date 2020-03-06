@@ -6,11 +6,20 @@
 /*----------------------------------------------------------------------------*/
 
 #pragma once
-#include <frc/util/color.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorSensorV3.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorMatch.h>
+#include <iostream>
+#include <frc/spark.h>
 
-class ColorSense {
+class Climber {
  public:
-  ColorSense();
+ // Constructor
+ Climber();
+ // Deconstructor
+ ~Climber();
+ // Control Climber
+ void up(double speed);
+
+ private:
+  // Create Spark Objects
+  frc::Spark ClimbMaster{0};
+  frc::Spark ClimbSlave{1};
 };

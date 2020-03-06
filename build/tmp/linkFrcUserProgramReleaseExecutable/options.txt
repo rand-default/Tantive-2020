@@ -1,8 +1,10 @@
 -o
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\exe\\frcUserProgram\\release\\frcUserProgram"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\25euz6pj7ia02c4elvfnnhcnn\\Climber.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\3bg5a77l7vd4edmrxq5jco6ri\\Robot.o"
-"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\9kdka5ek1moicggw7d0sn8tqw\\Pneumatics.o"
-"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\cm2y4onjc0iucj2g162qu5z2g\\ColorSense.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\3zcqddhbtqedwnpuzhr7coafk\\IntakeTransfer.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\ezvwoz4uhnyivq7d8pjpdmtbe\\ColorSense.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\hjxlc5o0h94uitxgxjsv6gzp\\DriverStation.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\nld3y9x25ul3l8bbh4ne38w\\chassis.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\nvdekldfh6l17vmh1p6benue\\OurJoystick.o"
 C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\1e90ed5a0138947440cf461d36c28a76\\wpilibc-cpp-2020.2.2-linuxathena\\linux\\athena\\shared\\libwpilibc.so

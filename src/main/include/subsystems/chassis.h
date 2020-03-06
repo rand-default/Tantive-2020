@@ -23,17 +23,11 @@ public:
   void LRSpeed(double LSpeed, double RSpeed);
 
 private:
-  // Create Spark Objects(2020 robot)
+  // Create Spark Objects
   frc::Spark LeftMaster{9};
   frc::Spark LeftSlave{8};
   frc::Spark RightMaster{6};
   frc::Spark RightSlave{7};
-
-  // Create Vex Objects(2019 robot)
-  frc::PWMVictorSPX LeftMaster{3};
-  frc::PWMVictorSPX LeftSlave{2};
-  frc::PWMVictorSPX RightMaster{1};
-  frc::PWMVictorSPX RightSlave{0};
 
   // THE SACRED COODE
   rev::CANSparkMax Brushless{1, rev::CANSparkMax::MotorType::kBrushless};

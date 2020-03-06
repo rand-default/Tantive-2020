@@ -1,2 +1,4 @@
 See file:///C:/Users/Admin/Desktop/Tantive%202020/build/tmp/compileFrcUserProgramReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramReleaseExecutableFrcUserProgramCpp.
+compiling DriverStation.cpp successful.
+
 Finished compileFrcUserProgramReleaseExecutableFrcUserProgramCpp, see full log file:///C:/Users/Admin/Desktop/Tantive%202020/build/tmp/compileFrcUserProgramReleaseExecutableFrcUserProgramCpp/output.txt.

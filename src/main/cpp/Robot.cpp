@@ -66,6 +66,7 @@ void Robot::TeleopInit() {}
 
 void Robot::TeleopPeriodic()
 {  
+  // Code for joystick, only the drivetrain(driver)
   if (joystick.trigger())
   {
     chassis.LRSpeed(joystick.xisis()*joystick.xisis()*joystick.xisis()-joystick.yisis()*joystick.yisis()*joystick.yisis(), joystick.yisis()*joystick.yisis()*joystick.yisis()+joystick.xisis()*joystick.xisis()*joystick.xisis());
@@ -89,7 +90,51 @@ void Robot::TeleopPeriodic()
   else
   {
   //chassis.LRSpeed(abs(joystick.xisis())*joystick.xisis() - abs(joystick.yisis())*joystick.yisis(), abs(joystick.xisis())*joystick.xisis() + abs(joystick.yisis())*joystick.yisis());
-  chassis.LRSpeed(joystick.xisis()-joystick.yisis(), joystick.xisis()+joystick.yisis());
+  chassis.LRSpeed(joystick.yisis()-joystick.xisis(), joystick.xisis()+joystick.yisis());
+  }
+
+  // Code for the Driver Station, all other motors(co-driver)
+  
+  // Intake winch raise/lower
+  if(station.red1())
+  {
+    intake.winch(0.1);
+  }
+  else if(station.red2())
+  {
+    intake.winch(-0.1);
+  }
+  else
+  {
+    intake.winch(0.0);
+  }
+
+  // Transfer forward/reverse
+  if(station.green1())
+  {
+    intake.trans(0.3, -0.3);
+  }
+  else if(station.green2())
+  {
+    intake.trans(-0.3, 0.3);
+  }
+  else
+  {
+    intake.trans(0.0,0.0);
+  }
+
+  // Climber up/down
+  if(station.blue1())
+  {
+    climb.up(0.3);
+  }
+  else if(station.blue2())
+  {
+    climb.up(-0.3);
+  }
+  else
+  {
+    climb.up(0.0);
   }
 }
 

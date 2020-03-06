@@ -4,13 +4,22 @@
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
+#include <frc/Joystick.h>
 
 #pragma once
-#include <frc/util/color.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorSensorV3.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\ef181eb264b8818487fd0269936cc989\ColorSensorV3-cpp-1.0.1-headers\rev\ColorMatch.h>
 
-class ColorSense {
+class DriverStation {
  public:
-  ColorSense();
+  bool red1();
+  bool red2();
+  bool green1();
+  bool green2();
+  bool blue1();
+  bool blue2();
+  bool yellow1();
+  bool yellow2();
+  bool white();
+
+ private:
+  frc::Joystick DriverStation{1};
 };

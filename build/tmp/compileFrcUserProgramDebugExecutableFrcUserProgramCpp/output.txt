@@ -1,4 +1,6 @@
 See file:///C:/Users/Admin/Desktop/Tantive%202020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling DriverStation.cpp successful.
+
 compiling OurJoystick.cpp successful.
 
 compiling Robot.cpp successful.
