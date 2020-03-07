@@ -8,6 +8,11 @@
 #include "IntakeTransfer.h"
 #include "Climber.h"
 #include "ColorSense.h"
+#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\668ed1c1966c97fb577eede7f2896be1\cameraserver-cpp-2020.2.2-headers\cameraserver\CameraServer.h>
+#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers\opencv2\core\core.hpp>
+#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers\opencv2\imgproc\imgproc.hpp>
+#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\668ed1c1966c97fb577eede7f2896be1\cameraserver-cpp-2020.2.2-headers\cameraserver\CameraServerShared.h>
+#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b97702da5f4ce7738418ef1913e15e56\cscore-cpp-2020.2.2-headers\cscore.h>
 
 class Robot : public frc::TimedRobot {    
     static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
@@ -32,6 +37,21 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;
 
  private:
+    static void VisionThread()
+    {
+        // cs::UsbCamera camera = CameraServer::GetInstance()-StartAutomaticCapture();
+        // camera.SetResolution(640, 480);
+        // cs::CvSink cvSink = CameraServer::GetInstance()->GetVideo();
+        // cs::CvSource outputStreamStd = CameraServer::GetInstance()->PutVideo("Gray", 640, 480);
+        // cv::Mat source;
+        // cv::Mat output;
+        // while(true)
+        // {
+        //     cvSink.GrabFrame(source);
+        //     cvtColor(source, output, cv::COLOR_BGR2GRAY);
+        //     ourputStreamStd.PutFrame(output);
+        // }
+    }
     Chassis chassis;
     OurJoystick joystick;
     DriverStation station;

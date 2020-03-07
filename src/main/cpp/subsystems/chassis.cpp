@@ -13,8 +13,8 @@ Chassis::~Chassis()
 
 void Chassis::left(double speed)
 {
-    LeftMaster.Set(speed);
-    LeftSlave.Set(speed);
+    LeftMaster.Set(-speed);
+    LeftSlave.Set(-speed);
 }
 
 void Chassis::right(double speed)

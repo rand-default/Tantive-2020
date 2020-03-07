@@ -1,8 +1,16 @@
 See file:///C:/Users/Admin/Desktop/Tantive%202020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling ColorSense.cpp successful.
+
 compiling DriverStation.cpp successful.
+
+compiling Climber.cpp successful.
+
+compiling chassis.cpp successful.
 
 compiling OurJoystick.cpp successful.
 
 compiling Robot.cpp successful.
+
+compiling IntakeTransfer.cpp successful.
 
 Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/Admin/Desktop/Tantive%202020/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.

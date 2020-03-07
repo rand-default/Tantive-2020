@@ -1,7 +1,10 @@
 #include "Robot.h"
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/util/color.h>
-#include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\668ed1c1966c97fb577eede7f2896be1\cameraserver-cpp-2020.2.2-headers\cameraserver\CameraServer.h>
+
+  cs::UsbCamera camera1;
+  cs::UsbCamera camera2;
+  cs::VideoSink server;
 
 void Robot::RobotInit() 
 {
@@ -10,7 +13,14 @@ void Robot::RobotInit()
   m_colorMatcher.AddColorMatch(kRedTarget);
   m_colorMatcher.AddColorMatch(kYellowTarget);
 
-frc::CameraServer::GetInstance()->StartAutomaticCapture();
+  camera1 = frc::CameraServer::GetInstance()->StartAutomaticCapture(0);
+  camera2 = frc::CameraServer::GetInstance()->StartAutomaticCapture(1);
+  server = frc::CameraServer::GetInstance()->GetServer();
+  camera1.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
+  camera2.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
+
+  // std::thread visionThread(VisionThread);
+  // VisionThread.detach();
 }
 
 void Robot::RobotPeriodic() 
@@ -90,7 +100,7 @@ void Robot::TeleopPeriodic()
   else
   {
   //chassis.LRSpeed(abs(joystick.xisis())*joystick.xisis() - abs(joystick.yisis())*joystick.yisis(), abs(joystick.xisis())*joystick.xisis() + abs(joystick.yisis())*joystick.yisis());
-  chassis.LRSpeed(joystick.yisis()-joystick.xisis(), joystick.xisis()+joystick.yisis());
+  chassis.LRSpeed(joystick.yisis()+joystick.xisis(), joystick.xisis()-joystick.yisis());
   }
 
   // Code for the Driver Station, all other motors(co-driver)
@@ -112,11 +122,11 @@ void Robot::TeleopPeriodic()
   // Transfer forward/reverse
   if(station.green1())
   {
-    intake.trans(0.3, -0.3);
+    intake.trans(-0.3, 0.3);
   }
   else if(station.green2())
   {
-    intake.trans(-0.3, 0.3);
+    intake.trans(0.3, -0.3);
   }
   else
   {
@@ -126,15 +136,29 @@ void Robot::TeleopPeriodic()
   // Climber up/down
   if(station.blue1())
   {
-    climb.up(0.3);
+    climb.up(-0.3);
   }
   else if(station.blue2())
   {
-    climb.up(-0.3);
+    climb.up(0.7);
   }
   else
   {
     climb.up(0.0);
+  }
+  
+  // Camera selection
+  // Front(intake)
+  if(station.yellow1())
+  {
+    printf("Setting camera 1\n");
+    server.SetSource(camera1);
+  }
+  // Back(output balls)
+  else if(station.yellow2())
+  {
+    printf("Setting camera 2\n");
+    server.SetSource(camera2);
   }
 }
 
