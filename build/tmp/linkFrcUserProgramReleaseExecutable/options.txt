@@ -3,6 +3,7 @@
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\25euz6pj7ia02c4elvfnnhcnn\\Climber.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\3bg5a77l7vd4edmrxq5jco6ri\\Robot.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\3zcqddhbtqedwnpuzhr7coafk\\IntakeTransfer.o"
+"C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\ahhe83o1xaijaaqi5bjkwehdz\\ColorWheel.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\ezvwoz4uhnyivq7d8pjpdmtbe\\ColorSense.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\hjxlc5o0h94uitxgxjsv6gzp\\DriverStation.o"
 "C:\\Users\\Admin\\Desktop\\Tantive 2020\\build\\objs\\frcUserProgram\\release\\frcUserProgramCpp\\nld3y9x25ul3l8bbh4ne38w\\chassis.o"

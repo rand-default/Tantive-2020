@@ -13,6 +13,7 @@
 #include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers\opencv2\imgproc\imgproc.hpp>
 #include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\668ed1c1966c97fb577eede7f2896be1\cameraserver-cpp-2020.2.2-headers\cameraserver\CameraServerShared.h>
 #include <C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\b97702da5f4ce7738418ef1913e15e56\cscore-cpp-2020.2.2-headers\cscore.h>
+#include "ColorWheel.h"
 
 class Robot : public frc::TimedRobot {    
     static constexpr auto i2cPort = frc::I2C::Port::kOnboard;
@@ -57,4 +58,5 @@ class Robot : public frc::TimedRobot {
     DriverStation station;
     IntakeTransfer intake;
     Climber climb;
+    ColorWheel roulette;
 };

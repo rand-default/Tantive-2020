@@ -4,7 +4,7 @@
 
   cs::UsbCamera camera1;
   cs::UsbCamera camera2;
-  cs::VideoSink server;
+  cs::VideoSink server1;
 
 void Robot::RobotInit() 
 {
@@ -15,7 +15,7 @@ void Robot::RobotInit()
 
   camera1 = frc::CameraServer::GetInstance()->StartAutomaticCapture(0);
   camera2 = frc::CameraServer::GetInstance()->StartAutomaticCapture(1);
-  server = frc::CameraServer::GetInstance()->GetServer();
+  server1 = frc::CameraServer::GetInstance()->GetServer();
   camera1.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
   camera2.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
 
@@ -58,7 +58,22 @@ void Robot::RobotPeriodic()
   frc::SmartDashboard::PutNumber("Blue", detectedColor.blue);
   frc::SmartDashboard::PutNumber("Confidence", confidence);
   frc::SmartDashboard::PutString("Detected Color", colorString);
-  std::cout << "Detected Color: " << colorString << std::endl;
+  if(colorString=="Blue")
+  {
+    std::cout << "Sensed color:   Red\n";
+  }
+  else if(colorString=="Yellow")
+  {
+    std::cout << "Sensed color:   Green\n";
+  }
+  else if(colorString=="Red")
+  {
+    std::cout << "Sensed color:   Blue\n";
+  }
+  else if(colorString=="Green")
+  {
+    std::cout << "Sensed color:   Yellow\n";
+  }
 }
 
 void Robot::DisabledInit() {}
@@ -87,15 +102,15 @@ void Robot::TeleopPeriodic()
     chassis.LRSpeed(joystick.yisis()*joystick.yisis()*joystick.yisis(), 0);
   }
   
-  else if (joystick.button5())
-  {
-    chassis.LRSpeed(0.7, 0.7);
-  }
+  // else if (joystick.button5())
+  // {
+  //   chassis.LRSpeed(0.7, 0.7);
+  // }
 
-  else if (joystick.button3())
-  {
-    chassis.LRSpeed(0.3, 0.3);
-  }
+  // else if (joystick.button3())
+  // {
+  //   chassis.LRSpeed(0.3, 0.3);
+  // }
 
   else
   {
@@ -108,11 +123,11 @@ void Robot::TeleopPeriodic()
   // Intake winch raise/lower
   if(station.red1())
   {
-    intake.winch(0.1);
+    intake.winch(0.5);
   }
   else if(station.red2())
   {
-    intake.winch(-0.1);
+    intake.winch(-0.5);
   }
   else
   {
@@ -136,11 +151,11 @@ void Robot::TeleopPeriodic()
   // Climber up/down
   if(station.blue1())
   {
-    climb.up(-0.3);
+    climb.up(0.3);
   }
   else if(station.blue2())
   {
-    climb.up(0.7);
+    climb.up(-0.7);
   }
   else
   {
@@ -152,13 +167,45 @@ void Robot::TeleopPeriodic()
   if(station.yellow1())
   {
     printf("Setting camera 1\n");
-    server.SetSource(camera1);
+    server1.SetSource(camera1);
   }
   // Back(output balls)
   else if(station.yellow2())
   {
     printf("Setting camera 2\n");
-    server.SetSource(camera2);
+    server1.SetSource(camera2);
+  }
+
+  // Roulette wheel arm code
+  // Winch raise/lower for arm
+  if(joystick.button3())
+  {
+    printf("Lowering roulette arm\n");
+    roulette.commies(-0.3);
+  }
+  else if(joystick.button5())
+  {
+    printf("Raising roulette arm\n");
+    roulette.commies(0.3);
+  }
+  else
+  {
+    roulette.commies(0.0);
+  }
+  // Spin the compression wheel
+  // Crank it(;
+  if(joystick.button6())
+  {
+    roulette.spin(0.7);
+  }
+  // Slow it down homie
+  else if(joystick.button4())
+  {
+    roulette.spin(0.2);
+  }
+  else
+  {
+    roulette.spin(0.0);
   }
 }
 

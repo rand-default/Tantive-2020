@@ -6,19 +6,23 @@
 /*----------------------------------------------------------------------------*/
 
 #pragma once
+
 #include <iostream>
-#include <frc/spark.h>
+#include <frc/PWMVictorSPX.h>
 
-class Climber {
+class ColorWheel {
  public:
- // Constructor
- Climber();
- // Deconstructor
- ~Climber();
- // Control Climber
- void up(double speed);
-
+  // Constructor
+  ColorWheel();
+  // Deconstructor
+  ~ColorWheel();
+  // Control winch for color wheel arm(russian roulette)
+  void commies(double speed);
+  // Control compression wheel to spin the roulette wheel
+  void spin(double speed);
  private:
-  // Create Spark Objects
-  frc::Spark Climb{0};
+  // Create talon objects
+  frc::PWMVictorSPX commiessssss{5};
+  frc::PWMVictorSPX spinnyyyyyyy{6};
+
 };

@@ -11,24 +11,24 @@ Chassis::~Chassis()
     printf("Deconstructing Chassis");
 }
 
-void Chassis::left(double speed)
-{
-    LeftMaster.Set(-speed);
-    LeftSlave.Set(-speed);
-}
+// void Chassis::left(double speed)
+// {
+//     LeftMaster.Set(-speed);
+//     LeftSlave.Set(-speed);
+// }
 
-void Chassis::right(double speed)
-{
-    RightMaster.Set(speed);
-    RightSlave.Set(speed);
-}
+// void Chassis::right(double speed)
+// {
+//     RightMaster.Set(speed);
+//     RightSlave.Set(speed);
+// }
 
 void Chassis::LRSpeed(double LSpeed, double RSpeed)
 {
-    LeftMaster.Set(LSpeed);
-    LeftSlave.Set(LSpeed);
-    RightMaster.Set(RSpeed);
-    RightSlave.Set(RSpeed);
+    Left.Set(LSpeed);
+    Right.Set(RSpeed);
+    // RightMaster.Set(RSpeed);
+    // RightSlave.Set(RSpeed);
 }
 
 void Chassis::neogeo(double speed)

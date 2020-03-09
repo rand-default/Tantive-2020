@@ -36,3 +36,13 @@ bool OurJoystick::button5()
 {
     return stick.GetRawButton(5);
 }
+
+bool OurJoystick::button4()
+{
+    return stick.GetRawButton(4);
+}
+
+bool OurJoystick::button6()
+{
+    return stick.GetRawButton(6);
+}

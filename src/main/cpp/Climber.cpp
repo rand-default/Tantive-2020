@@ -20,6 +20,6 @@ Climber::~Climber()
 
 void Climber::up(double speed)
 {
-    ClimbMaster.Set(speed);
-    ClimbSlave.Set(speed);
+    Climb.Set(speed);
+    // ClimbSlave.Set(speed);
 }

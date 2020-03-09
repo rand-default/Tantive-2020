@@ -15,19 +15,16 @@ public:
   ~Chassis();
   //Control brushless speed
   void neogeo(double speed);
-  // Control Left Motor Speed
-  void left(double speed);
-  // Control Right Motor Speed
-  void right(double speed);
+  // // Control Left Motor Speed
+  // void left(double speed);
+  // // Control Right Motor Speed
+  // void right(double speed);
   // Control both sides in one function
   void LRSpeed(double LSpeed, double RSpeed);
-
 private:
   // Create Spark Objects
-  frc::Spark LeftMaster{9};
-  frc::Spark LeftSlave{8};
-  frc::Spark RightMaster{6};
-  frc::Spark RightSlave{7};
+  frc::Spark Left{9};
+  frc::Spark Right{8};
 
   // THE SACRED COODE
   rev::CANSparkMax Brushless{1, rev::CANSparkMax::MotorType::kBrushless};

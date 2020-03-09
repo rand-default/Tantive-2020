@@ -5,20 +5,25 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#pragma once
-#include <iostream>
-#include <frc/spark.h>
+#include "ColorWheel.h"
+#include <frc/smartdashboard/SmartDashboard.h>
 
-class Climber {
- public:
- // Constructor
- Climber();
- // Deconstructor
- ~Climber();
- // Control Climber
- void up(double speed);
+ColorWheel::ColorWheel() 
+{
+    printf("Creating ColorWheel");
+}
 
- private:
-  // Create Spark Objects
-  frc::Spark Climb{0};
-};
+ColorWheel::~ColorWheel()
+{
+    printf("Deconstructing ColorWheel");
+}
+
+void ColorWheel::commies(double speed)
+{
+    commiessssss.Set(speed);
+}
+
+void ColorWheel::spin(double speed)
+{
+    spinnyyyyyyy.Set(speed);
+}
